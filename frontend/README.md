@@ -8,4 +8,4 @@ Start backend by starting the "WebsiteApplicationJava" main method.
 
 ## frontend
 
-Start frontend by navigating to the frontend folder and run "npm start".
+Start frontend by navigating to the frontend folder and run "npm start".git 
