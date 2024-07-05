@@ -1,0 +1,45 @@
+body {
+   color: #682ae9;
+}
+
+#title {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   margin-top: 20%;
+   height: 10vh;
+}
+
+h1 {
+   font-family: 'Roboto', sans-serif;
+   font-size: 4rem;
+   font-weight: 700;
+   word-spacing: -.1em;
+   letter-spacing: -.05em;
+   word-break: break-word;
+   -webkit-hyphens: auto;
+   hyphens: auto;
+}
+
+#name {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+h2 {
+   font-family: 'Roboto', sans-serif;
+   font-size: 2rem;
+   font-weight: 700;
+   word-spacing: -.1em;
+   letter-spacing: -.05em;
+   word-break: break-word;
+   -webkit-hyphens: auto;
+   hyphens: auto;
+}
+
+@media screen and (max-width: 568px) {
+   #home .title {
+      white-space: nowrap;
+   }
+}
