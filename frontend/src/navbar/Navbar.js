@@ -3,9 +3,11 @@ import { NavLink } from 'react-router-dom';
 import { ReactComponent as LinkedinLogo } from '../assets/images/linkedin-logo.svg';
 import { ReactComponent as GithubLogo } from '../assets/images/github-logo.svg';
 import { motion, AnimatePresence } from 'framer-motion';
+import About from '../pages/About/About.js';
 import './Navbar.css';
 
 const Navbar = () => {
+
     return (
         <motion.nav
             className="navbar"
@@ -13,10 +15,28 @@ const Navbar = () => {
             animate={{ y: 0 }}
             transition={{ type: 'spring', stiffness: 120 }}
         >
-            <div className="navbar-logo">
-                <a href="#">MRT</a>
-            </div>
+            <motion.div
+                whileHover={{ scale: 1.2 }}
+                whileTap={{ scale: 0.9 }} className="navbar-logo">
+                <NavLink to="/homepage" activeClassName="active">
+                    MRT</NavLink>
+
+            </motion.div>
+            <motion.div>
+                <motion.div className="theme">
+                    <button className='dark-mode'>Dark</button>
+                    <button className='light-mode'>Light</button>
+                </motion.div>
+            </motion.div>
             <ul className="navbar-links">
+                <motion.li
+                    whileHover={{ scale: 1.1 }}
+                    whileTap={{ scale: 0.9 }}>
+                    <NavLink to="/homepage" activeClassName="active">
+                        .home()
+                    </NavLink>
+                </motion.li>
+
                 <motion.li
                     whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.9 }}
@@ -26,7 +46,7 @@ const Navbar = () => {
                     </NavLink>
                 </motion.li>
                 <motion.li
-                    whileHover={{ scale: 1 }}
+                    whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.9 }}
                 >
                     <a href="mailto:youremail@example.com" target="_blank" rel="noopener noreferrer">

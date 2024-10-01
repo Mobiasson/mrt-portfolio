@@ -1,0 +1,9 @@
+.aboutme-container {
+    display: flex;
+    align-items: center;
+    height: 20vh;
+    width: 100vh;
+    margin-top: 20vh;
+    margin-left: auto;
+    margin-right: auto;
+}
