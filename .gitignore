@@ -9,6 +9,9 @@ frontend/node_modules/.cache/
 # testing
 /coverage
 
+# VSCODE
+.vscode
+
 #.next
 frontend/.next/
 
