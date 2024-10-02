@@ -26,7 +26,7 @@ const Homepage = () => {
             <div className="skillset">
                 <h2>Skillset</h2>
             </div>
-            <section className="skills">
+            <div className="skills">
                 <div className="backend">
                     <h3>backend</h3>
                     <h5>Java</h5>
@@ -48,10 +48,7 @@ const Homepage = () => {
                     <h5>Java</h5>
                     <h5>Java</h5>
                 </div>
-            </section>
-
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
-            <script src="script.js"></script>
+            </div>
         </>
     );
 

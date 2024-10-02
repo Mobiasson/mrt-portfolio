@@ -4,10 +4,12 @@ import Navbar from './navbar/Navbar.js';
 import HomePage from './pages/Home/HomePage.js';
 import About from './pages/About/About.js';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import ParticlesComponent from './components/animations/particles.js';
 
 function App() {
   return (
-    <div>
+    <div className='App'>
+      <ParticlesComponent id="particles" />
       <Navbar />
       <div className='container'>
         <Routes>
