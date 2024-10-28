@@ -80,9 +80,41 @@ const Homepage = () => {
                             window.location.href = "mailto:mikaeltobiasson@hotmail.com";
                         }}> Send me a message
                     </button>
+
+                    <button
+                        className="msgBtn"
+                        onClick={() => {
+                            const link = document.createElement("a");
+                            link.href = `${process.env.PUBLIC_URL}/CV_Mikael_Ros_Tobiasson.pdf`; // Path to your file in the public folder
+                            link.download = "Mikael_Ros_Tobiasson_CV.pdf"; // Specify the filename for the download
+                            document.body.appendChild(link);
+                            link.click();
+                            document.body.removeChild(link);
+                        }}
+                    >
+                        Download CV
+                    </button>
+
+                    <button
+                        className="msgBtn"
+                        onClick={() => {
+                            const link = document.createElement("a");
+                            link.href = `${process.env.PUBLIC_URL}/Personligt Brev - Mikael Ros Tobiasson.pdf`; // Path to your file in the public folder
+                            link.download = "Personligt Brev - Mikael Ros Tobiasson.pdf"; // Specify the filename for the download
+                            document.body.appendChild(link);
+                            link.click();
+                            document.body.removeChild(link);
+                        }}
+                    >
+                        Download Personal Letter
+                    </button>
+
+
                 </motion.div>
             </motion.div >
         </>
+
+
     );
 }
 

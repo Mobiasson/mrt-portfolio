@@ -15,7 +15,7 @@ const About = () => {
         >
             <motion.div className="aboutme-content">
 
-                <h1>About Me</h1>
+                <h1>.aboutMe()</h1>
                 <p>
                     I am a full-stack web developer with a passion for creating beautiful
                     and functional websites. I have experience with JavaScript, React,
