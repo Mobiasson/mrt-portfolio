@@ -2,7 +2,7 @@
   "name": "my-app",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://Mobiasson.github.io/mrt-portfolio",
+  "homepage": "http://localhost:3000/homepage",
   "dependencies": {
     "@babel/plugin-proposal-private-property-in-object": "^7.16.7",
     "@testing-library/jest-dom": "^5.17.0",
@@ -14,6 +14,7 @@
     "my-app": "file:",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
+    "react-rough-notation": "^1.0.5",
     "react-router-dom": "^6.24.1",
     "react-scripts": "5.0.1",
     "tsparticles": "^3.5.0",
@@ -23,9 +24,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": [

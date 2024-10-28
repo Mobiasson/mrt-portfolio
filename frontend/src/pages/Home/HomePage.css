@@ -40,10 +40,12 @@ body {
    font-size: 30px;
 }
 
-.hero_intro p {
+.hero_intro h3 {
    opacity: 70%;
    color: rgb(154, 154, 154);
 }
+
+.hero_intro p {}
 
 .hero_content h2 span:first-child {
    display: block;
@@ -66,8 +68,8 @@ body {
 .hero_intro .msgBtn {
    font-family: var(--primary-font);
    padding: 6px 20px;
-   font-size: 12px;
-   font-weight: 500;
+   font-size: 15px;
+   font-weight: 0;
    border-radius: 6px;
    transition: background-color 0.5s;
 }
@@ -82,9 +84,12 @@ body {
 
 .skills {
    display: flex;
+   flex-wrap: wrap;
+   gap: 20px;
    margin-left: auto;
    margin-right: auto;
    margin-top: 10vh;
+   margin-bottom: 10vh;
    width: fit-content;
 }
 
@@ -99,10 +104,23 @@ body {
 
 .backend,
 .frontend,
-.database {
-   width: 240px;
-   margin: 5px;
+.database,
+.agile {
+   width: 500px;
    height: auto;
+   margin-left: 60px;
+   margin-right: 60px;
    background-color: bisque;
-   background: rgb(61, 61, 61);
+   background: rgb(61, 61, 61, 80%);
+   border-radius: 10px;
+   border-style: groove;
+   border-width: 1px;
+}
+
+.skills h5 {
+   padding-left: 20px;
+}
+
+.skills h3 {
+   padding-left: 20px;
 }

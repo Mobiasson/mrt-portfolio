@@ -14,11 +14,22 @@ body {
   font-family: var(--primary-font);
 }
 
-.navbar {
+/* .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1rem;
+} */
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: -webkit-sticky;
+  position: sticky;
+  top: -3px;
+  padding: 1rem;
+  box-shadow: 0 0.125rem 0.25rem 0 rgb(0 0 0 / 11%);
 }
 
 .navbar-logo a {

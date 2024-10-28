@@ -6,6 +6,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import About from '../pages/About/About.js';
 import './Navbar.css';
 
+
 const Navbar = () => {
 
     return (
@@ -21,12 +22,6 @@ const Navbar = () => {
                 <NavLink to="/homepage" activeClassName="active">
                     MRT</NavLink>
 
-            </motion.div>
-            <motion.div>
-                <motion.div className="theme">
-                    <button className='dark-mode'>Dark</button>
-                    <button className='light-mode'>Light</button>
-                </motion.div>
             </motion.div>
             <ul className="navbar-links">
                 <motion.li
