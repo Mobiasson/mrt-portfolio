@@ -75,58 +75,13 @@ const Homepage = () => {
                         I'm currently looking for a new role as a developer.  <RoughNotation type="circle" color="#dae31c" show={true} animationDelay={1000} animationDuration={1500}>Hire me?
                         </RoughNotation>
                     </h2>
-
-                    <Button text="Send me a message" className="msgBtn" />
+                    <button className="msgBtn"
+                        onClick={() => {
+                            window.location.href = "mailto:mikaeltobiasson@hotmail.com";
+                        }}> Send me a message
+                    </button>
                 </motion.div>
             </motion.div >
-
-            {/* Skillset Section */}
-            < motion.div
-                initial={{ opacity: 0, scale: 0 }
-                }
-                animate={{ opacity: isSkillsetInFocus ? 1 : 0.2, scale: 1 }}
-                transition={{ duration: 0.5 }}
-                className="skillset"
-            >
-                {/* <h2>Skillset</h2> */}
-            </motion.div >
-
-            {/* Skills Section */}
-            {/* <motion.div
-                initial={{ opacity: 0, scale: 0 }}
-                animate={{ opacity: isSkillsInFocus ? 1 : 0.2, scale: 1 }}
-                transition={{ duration: 0.5 }}
-                className="skills"
-            >
-                <div className="backend">
-                    <h3>Backend</h3>
-                    <h5>Java</h5>
-                    <h5>Java</h5>
-                    <h5>Java</h5>
-                    <h5>Java</h5>
-                </div>
-                <div className="frontend">
-                    <h3>Frontend</h3>
-                    <h5>Java</h5>
-                    <h5>Java</h5>
-                    <h5>Java</h5>
-                    <h5>Java</h5>
-                </div>
-                <div className="database">
-                    <h3>Database</h3>
-                    <h5>Java</h5>
-                    <h5>Java</h5>
-                    <h5>Java</h5>
-                    <h5>Java</h5>
-                </div>
-                <div className="agile">
-                    <h3>Agile</h3>
-                    <h5>Java</h5>
-                    <h5>Java</h5>
-                    <h5>Java</h5>
-                    <h5>Java</h5>
-                </div>
-            </motion.div> */}
         </>
     );
 }

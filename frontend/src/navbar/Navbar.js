@@ -40,14 +40,7 @@ const Navbar = () => {
                         .aboutMe()
                     </NavLink>
                 </motion.li>
-                <motion.li
-                    whileHover={{ scale: 1.1 }}
-                    whileTap={{ scale: 0.9 }}
-                >
-                    <a href="mailto:youremail@example.com" target="_blank" rel="noopener noreferrer">
-                        .contact()
-                    </a>
-                </motion.li>
+
                 <motion.li
                     whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.9 }}
