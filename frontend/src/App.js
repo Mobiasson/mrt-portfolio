@@ -12,7 +12,7 @@ function App() {
       <ParticlesComponent id="particles" />
       <Navbar />
       <Routes>
-        <Route path='/' element={<HomePage />} />
+        <Route path='/mrt-portfolio' element={<HomePage />} />
         <Route path='/homepage' element={<HomePage />} />
         <Route path='/about-me' element={<About />} />
       </Routes>
