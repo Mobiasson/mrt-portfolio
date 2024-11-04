@@ -11,12 +11,11 @@ function App() {
     <div className='App'>
       <ParticlesComponent id="particles" />
       <Navbar />
-      <div className='container'>
-        <Routes>
-          <Route path='/homepage' element={<HomePage />} />
-          <Route path='/about-me' element={<About />} />
-        </Routes>
-      </div>
+      <Routes>
+        <Route path='/' element={<HomePage />} />
+        <Route path='/homepage' element={<HomePage />} />
+        <Route path='/about-me' element={<About />} />
+      </Routes>
     </div>
   );
 }
