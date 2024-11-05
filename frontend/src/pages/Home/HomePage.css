@@ -84,6 +84,7 @@ body {
    border-width: 0.5px;
    color: #e8e8e8;
    border-radius: 6px;
+   cursor: pointer;
 }
 
 .button-link {

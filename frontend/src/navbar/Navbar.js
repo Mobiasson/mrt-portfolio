@@ -2,8 +2,7 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { ReactComponent as LinkedinLogo } from '../assets/images/linkedin-logo.svg';
 import { ReactComponent as GithubLogo } from '../assets/images/github-logo.svg';
-import { motion, AnimatePresence } from 'framer-motion';
-import About from '../pages/About/About.js';
+import { motion } from 'framer-motion';
 import './Navbar.css';
 
 

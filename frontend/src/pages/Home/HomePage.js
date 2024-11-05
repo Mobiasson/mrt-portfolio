@@ -2,13 +2,10 @@ import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import './HomePage.css';
 import portrait from "../../assets/images/mrt.jpg";
-import Button from "../../components/buttons/Button.js";
-import { RoughNotation, RoughNotationGroup } from "react-rough-notation";
+import { RoughNotation } from "react-rough-notation";
 
 const Homepage = () => {
     const [isHeroInFocus, setIsHeroInFocus] = useState(true);
-    const [isSkillsetInFocus, setIsSkillsetInFocus] = useState(true);
-    const [isSkillsInFocus, setIsSkillsInFocus] = useState(true);
 
     useEffect(() => {
         const handleScroll = () => {
@@ -19,19 +16,6 @@ const Homepage = () => {
                 setIsHeroInFocus(rect.top >= -100); // true if in focus, false if out of view
             }
 
-            // Check skillset section visibility
-            const skillsetElement = document.querySelector('.skillset');
-            if (skillsetElement) {
-                const rect = skillsetElement.getBoundingClientRect();
-                setIsSkillsetInFocus(rect.top >= -100); // true if in focus
-            }
-
-            // Check skills section visibility
-            const skillsElement = document.querySelector('.skills');
-            if (skillsElement) {
-                const rect = skillsElement.getBoundingClientRect();
-                setIsSkillsInFocus(rect.top >= -100); // true if in focus
-            }
         };
 
         window.addEventListener("scroll", handleScroll);
@@ -43,7 +27,6 @@ const Homepage = () => {
 
     return (
         <>
-            {/* Hero Section */}
             <motion.div className="hero">
                 <motion.div
                     initial={{ opacity: 0, scale: 0 }}
@@ -85,8 +68,8 @@ const Homepage = () => {
                         className="msgBtn"
                         onClick={() => {
                             const link = document.createElement("a");
-                            link.href = `${process.env.PUBLIC_URL}/CV_Mikael_Ros_Tobiasson.pdf`; // Path to your file in the public folder
-                            link.download = "Mikael_Ros_Tobiasson_CV.pdf"; // Specify the filename for the download
+                            link.href = `${process.env.PUBLIC_URL}/CV_Mikael_Ros_Tobiasson.pdf`;
+                            link.download = "Mikael_Ros_Tobiasson_CV.pdf";
                             document.body.appendChild(link);
                             link.click();
                             document.body.removeChild(link);
@@ -99,8 +82,8 @@ const Homepage = () => {
                         className="msgBtn"
                         onClick={() => {
                             const link = document.createElement("a");
-                            link.href = `${process.env.PUBLIC_URL}/Personligt Brev - Mikael Ros Tobiasson.pdf`; // Path to your file in the public folder
-                            link.download = "Personligt Brev - Mikael Ros Tobiasson.pdf"; // Specify the filename for the download
+                            link.href = `${process.env.PUBLIC_URL}/Personligt Brev - Mikael Ros Tobiasson.pdf`;
+                            link.download = "Personligt Brev - Mikael Ros Tobiasson.pdf";
                             document.body.appendChild(link);
                             link.click();
                             document.body.removeChild(link);
@@ -113,7 +96,6 @@ const Homepage = () => {
                 </motion.div>
             </motion.div >
         </>
-
 
     );
 }
