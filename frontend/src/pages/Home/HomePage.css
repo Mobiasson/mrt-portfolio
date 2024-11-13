@@ -95,13 +95,31 @@ body {
    border-left: 1px solid #CCCCCC;
 }
 
+.skills-container {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   margin-top: 20vh;
+}
+
+.skills-title {
+   font-size: 5vh;
+   text-align: center;
+   margin-bottom: 0;
+   margin-top: 50px;
+}
+
 .skills {
    background-color: rgb(37, 38, 38);
    display: flex;
    font-size: 20px;
-   margin-top: 10%;
+   margin-top: 20px;
    margin-inline: 10%;
    margin-bottom: 20%;
+}
+
+.skills_header {
+
 }
 
 .skills h2 {

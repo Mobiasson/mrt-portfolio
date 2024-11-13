@@ -82,7 +82,7 @@ const Homepage = () => {
                 <motion.div
                     className="hero_content"
                     initial={{ opacity: 0, scale: 0 }}
-                    animate={{ opacity: isHeroInFocus ? 1 : 0.2, scale: 1 }}
+                    animate={{ opacity: isHeroInFocus ? 1 : 0, scale: 1 }}
                     transition={{ duration: 1 }}
                 >
                     <img src={portrait} alt="profile image" className="hero_image"></img>
@@ -90,7 +90,7 @@ const Homepage = () => {
 
                 <motion.div
                     initial={{ opacity: 0, scale: 0 }}
-                    animate={{ opacity: isHeroInFocus ? 1 : 0.2, scale: 1 }}
+                    animate={{ opacity: isHeroInFocus ? 1 : 0, scale: 1 }}
                     transition={{ duration: 1 }}
                     className="hero_intro">
                     <h2>
@@ -145,43 +145,55 @@ const Homepage = () => {
                 </motion.div>
             </motion.div >
 
-            <div className="skills">
-                {sections.map(section => (
-                    <motion.div
-                        key={section.id}
-                        id={section.id}
-                        className="section"
-                    >
-                       <motion.h2
-                            onClick={() => toggleSection(section.id)}
-                            initial={{ opacity: 0.5 }}
-                            animate={{ opacity: expandedSection === section.id ? 1 : 0.3 }}
-                            transition={{ duration: 0.7 }}
-                        >
-                            {section.name}
-                        </motion.h2>
+            <div className="skills-container">
+                <motion.h1
+                    initial={{ opacity: 0, y: -20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.7 }}
+                    className="skills-title"
+                >
+                    My Skills
+                </motion.h1>
 
-                        <motion.p
+                <div className="skills">
+                    {sections.map(section => (
+                        <motion.div
                             key={section.id}
-                            initial={{ opacity: 0, y: 20, scale: 0.5 }}
-                            animate={{
-                                opacity: expandedSection === section.id ? 1 : 0,
-                                y: expandedSection === section.id ? 0 : 20,
-                                scale: expandedSection === section.id ? 1 : 1,
-                            }}
-                            exit={{ opacity: 0, y: 20, scale: 0.5 }}
-                            transition={{
-                                opacity: { duration: 0.3 },
-                                y: { duration: 0.6, ease: "easeInOut" },
-                                scale: { duration: 0.3 }
-                            }}
-                            className="section-description"
+                            id={section.id}
+                            className="section"
                         >
-                            {section.description}
-                        </motion.p>
-                    </motion.div>
-                ))}
+                            <motion.h2
+                                onClick={() => toggleSection(section.id)}
+                                initial={{ opacity: 0.5 }}
+                                animate={{ opacity: expandedSection === section.id ? 1 : 0.3 }}
+                                transition={{ duration: 0.7 }}
+                            >
+                                {section.name}
+                            </motion.h2>
+
+                            <motion.p
+                                key={section.id}
+                                initial={{ opacity: 0, y: 20, scale: 0.5 }}
+                                animate={{
+                                    opacity: expandedSection === section.id ? 1 : 0,
+                                    y: expandedSection === section.id ? 0 : 20,
+                                    scale: expandedSection === section.id ? 1 : 1,
+                                }}
+                                exit={{ opacity: 0, y: 20, scale: 0.5 }}
+                                transition={{
+                                    opacity: { duration: 0.3 },
+                                    y: { duration: 0.6, ease: "easeInOut" },
+                                    scale: { duration: 0.3 }
+                                }}
+                                className="section-description"
+                            >
+                                {section.description}
+                            </motion.p>
+                        </motion.div>
+                    ))}
+                </div>
             </div>
+
         </>
     );
 }
