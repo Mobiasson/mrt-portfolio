@@ -13,9 +13,10 @@ const About = () => {
                 damping: 20,
             }}
         >
-            <motion.div className="aboutme-content">
 
+            <motion.div className="aboutme-content">
                 <h1>.aboutMe()</h1>
+                <h2></h2>
                 <p>
                     I am a full-stack web developer with a passion for creating beautiful
                     and functional websites. I have experience with JavaScript, React,

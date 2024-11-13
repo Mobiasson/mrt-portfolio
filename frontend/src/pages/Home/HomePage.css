@@ -19,12 +19,10 @@ body {
    z-index: -1;
 }
 
-/* HomePage.css */
-
 .hero {
    position: relative;
    display: flex;
-   margin-left: 25vh;
+   margin-inline: 20vh;
    margin-top: 10vh;
 }
 
@@ -44,8 +42,6 @@ body {
    opacity: 70%;
    color: rgb(154, 154, 154);
 }
-
-.hero_intro p {}
 
 .hero_content h2 span:first-child {
    display: block;
@@ -97,4 +93,28 @@ body {
    border-right: 1px solid #333333;
    border-bottom: 1px solid #333333;
    border-left: 1px solid #CCCCCC;
- }
+}
+
+.skills {
+   background-color: rgb(37, 38, 38);
+   display: flex;
+   font-size: 20px;
+   margin-top: 10%;
+   margin-inline: 10%;
+   margin-bottom: 20%;
+}
+
+.skills h2 {
+   padding-inline: 20px;
+   cursor: pointer;
+   width: fit-content;
+}
+
+.skills p {
+   background-color: #333333;
+   padding: 10px;
+   width: 50%;
+   position: absolute;
+   left: 25%;
+   transition: transform 0.6s ease-in-out;
+}
