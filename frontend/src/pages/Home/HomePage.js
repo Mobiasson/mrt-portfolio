@@ -7,13 +7,23 @@ import { RoughNotation } from "react-rough-notation";
 const Homepage = () => {
     const [isHeroInFocus, setIsHeroInFocus] = useState(true);
     const [expandedSection, setExpandedSection] = useState('java');
+    const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
+
+    useEffect(() => {
+        const handleResize = () => setIsMobile(window.innerWidth < 768);
+        window.addEventListener("resize", handleResize);
+
+        return () => window.removeEventListener("resize", handleResize);
+    }, []);
 
     useEffect(() => {
         const handleScroll = () => {
             const heroElement = document.querySelector('.hero');
             if (heroElement) {
                 const rect = heroElement.getBoundingClientRect();
-                setIsHeroInFocus(rect.top >= -100);
+
+                const threshold = isMobile ? -300 : -100;
+                setIsHeroInFocus(rect.top >= threshold);
             }
         };
 
@@ -21,7 +31,7 @@ const Homepage = () => {
         return () => {
             window.removeEventListener("scroll", handleScroll);
         };
-    }, []);
+    }, [isMobile]);
 
     const toggleSection = (sectionId) => {
         setExpandedSection(prevState => prevState === sectionId ? null : sectionId);
