@@ -41,32 +41,31 @@ const Homepage = () => {
         {
             id: 'java',
             name: 'Java',
-            description: 'This is text about Java. Java is a powerful, object-oriented programming language used for a wide range of applications. It is known for its portability, as Java programs can run on any platform with a JVM (Java Virtual Machine).'
-        },
+            description: "Java is my primary language and the one I have most experience with. I always thrive to produce secure and scaleable code to the best of my ability. Either if it's creating new API's or managing existing ones. I prosper especially in a challenge and often try to think outside the box to tackle any obstacle in my way. With a great attention to detail, maybe I am the one to solve your problems?"},
         {
             id: 'javascript',
             name: 'JavaScript',
-            description: 'This is text about JavaScript. JavaScript is a versatile, high-level programming language that is primarily used for creating interactive web pages. It allows developers to add dynamic behavior, such as animations and form validations, to websites.'
+            description: "I have a good knowledge of JavaScript and it's something I've worked quite a lot with and something I enjoy. Even here I always try to produce high-quality code that is secure and manageable but at the same time bring life to a webpage and give the user the best experience possible."
         },
         {
             id: 'react',
             name: 'React',
-            description: 'This is text about React. React is a popular JavaScript library for building user interfaces, especially for single-page applications. It enables developers to create reusable UI components and manage application state efficiently.'
+            description: "This portfolio is my second React project and I chose React to expand my knowledge as much as possible. I thoroughly enjoy it and I would very much like to work more with it on something bigger. I especially enjoy the component-based architecture to minimize repetitive code and also being easy to debug."
         },
         {
             id: 'html',
             name: 'HTML',
-            description: 'This is text about HTML. HTML (Hypertext Markup Language) is the standard language for creating web pages. It provides the basic structure of a website, including elements like headings, paragraphs, links, and images.'
+            description: "I also have good knowledge and experience working with HTML. It's a breath of fresh air to visually see what you're creating and something I enjoy a lot."
         },
         {
             id: 'css',
             name: 'CSS',
-            description: 'This is text about CSS. CSS (Cascading Style Sheets) is used to describe the presentation of a document written in HTML. It controls the layout, colors, fonts, and overall visual appearance of web pages.'
+            description: "I have previous knowledge and experience in the craft of art and colours. I have studied colours in my time as a florist but also in my time drawing. To me it correlates to CSS, knowing what looks beautiful together, but also what doesn't."
         },
         {
             id: 'angular',
             name: 'Angular',
-            description: 'This is text about Angular. Angular is a popular framework for building dynamic, single-page web applications. It provides a robust set of tools for developing front-end applications, including two-way data binding and dependency injection.'
+            description: "Angular is something I worked with in my time at Västra Götalandsregionen where I did my LIA. I especially enjoy the two-way data binding approach and is also something I would like to work more with in the future."
         },
         {
             id: 'sql',
@@ -92,7 +91,7 @@ const Homepage = () => {
                 <motion.div
                     className="hero_content"
                     initial={{ opacity: 0, scale: 0 }}
-                    animate={{ opacity: isHeroInFocus ? 1 : 0, scale: 1 }}
+                    animate={{ opacity: isHeroInFocus ? 1 : 0.2, scale: 1 }}
                     transition={{ duration: 1 }}
                 >
                     <img src={portrait} alt="profile image" className="hero_image"></img>
@@ -100,7 +99,7 @@ const Homepage = () => {
 
                 <motion.div
                     initial={{ opacity: 0, scale: 0 }}
-                    animate={{ opacity: isHeroInFocus ? 1 : 0, scale: 1 }}
+                    animate={{ opacity: isHeroInFocus ? 1 : 0.2 , scale: 1 }}
                     transition={{ duration: 1 }}
                     className="hero_intro">
                     <h2>
