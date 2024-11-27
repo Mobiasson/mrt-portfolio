@@ -5,8 +5,16 @@
    font-style: normal;
 }
 
+@font-face {
+   font-family: 'Roboto-Italic';
+   src: url("../../assets/fonts/roboto/Roboto-Italic.ttf") format('truetype');
+   font-weight: italic;
+   font-style: normal;
+}
+
 :root {
    --primary-font: 'Roboto', sans-serif;
+   --secondary-font: 'Roboto-Italic'
 }
 
 body {
@@ -19,11 +27,12 @@ body {
    z-index: -1;
 }
 
-.hero {
+.hero-container {
    position: relative;
    display: flex;
    margin-inline: 20vh;
    margin-top: 10vh;
+   scroll-snap-type: y mandatory;
 }
 
 .hero_intro {
@@ -106,10 +115,11 @@ body {
    font-size: 4vh;
    text-align: center;
    margin-bottom: 0;
-   margin-top: 50px;
+   margin-top: 20vh;
 }
 
 .skills {
+   scroll-snap-type: y mandatory;
    background-color: rgb(37, 38, 38);
    display: flex;
    font-size: 17px;
@@ -133,80 +143,109 @@ body {
    transition: transform 0.6s ease-in-out;
 }
 
+.jobs-container {
+   margin-bottom: 30vh;
+   margin-top: 20vh;
+   display: flex;
+   flex-direction: column;
+}
+
+.jobs-title {
+   font-size: 4vh;
+   text-align: center;
+}
+
+.jobs {
+   display: flex;
+   flex-direction: row;
+}
+
+.jobs h2 {
+   font-family: var(--secondary-font);
+   background-color: #333333;
+   margin-inline: auto;
+   border-style: groove;
+   border-radius: 15px;
+   padding: 7vh;
+}
+
+
+
 @media (max-width: 768px) {
    .hero {
-       flex-direction: column;
-       margin-inline: 5%;
-       margin-top: 5vh;
+      flex-direction: column;
+      margin-inline: 5%;
+      margin-top: 5vh;
    }
 
    .hero_intro {
-       text-align: center;
-       margin-top: 5%;
-       margin-left: 0;
-       padding: 0 20px;
+      text-align: center;
+      margin-top: 5%;
+      margin-left: 0;
+      padding: 0 20px;
    }
 
    .hero_intro h2 {
-       font-size: 22px;
+      font-size: 22px;
    }
 
    .hero_intro p {
-       font-size: 16px;
-       padding-inline: 5%;
+      font-size: 16px;
+      padding-inline: 5%;
    }
 
    .hero_image {
-       width: 40%;
-       height: auto;
-       margin-left: 30%;
+      width: 40%;
+      height: auto;
+      margin-left: 30%;
    }
 
    .skills-container {
-       margin-top: 15vh;
+      margin-top: 15vh;
    }
 
    .skills-title {
-       font-size: 4vh;
-       margin-top: 40px;
+      font-size: 4vh;
+      margin-top: 40px;
    }
 
    .skills {
-       font-size: 16px;
-       width: 90%;
-       margin-inline: auto;
-       flex-direction: column;
+      font-size: 16px;
+      width: 90%;
+      margin-inline: auto;
+      flex-direction: column;
    }
 
    .skills h2 {
-       font-size: 18px;
+      font-size: 18px;
    }
 
    .skills p {
-       font-size: 14px;
-       padding: 8px;
-       width: auto;
-       max-width: 100%;
-       margin: 10px 0;
-       position: static;
+      font-size: 14px;
+      padding: 8px;
+      width: auto;
+      max-width: 100%;
+      margin: 10px 0;
+      position: static;
    }
 }
 
 @media (max-width: 375px) {
    .hero_intro h2 {
-       font-size: 20px;
+      font-size: 20px;
    }
 
    .msgBtn {
-       font-size: 14px;
-       padding: 5px 15px;
+      font-size: 14px;
+      padding: 10px 15px;
+      padding-top: 5px;
    }
 
    .skills h2 {
-       font-size: 16px;
+      font-size: 16px;
    }
 
    .skills p {
-       font-size: 12px;
+      font-size: 12px;
    }
 }

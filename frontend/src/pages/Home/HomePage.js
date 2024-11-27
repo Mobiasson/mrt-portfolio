@@ -8,6 +8,7 @@ const Homepage = () => {
     const [isHeroInFocus, setIsHeroInFocus] = useState(true);
     const [expandedSection, setExpandedSection] = useState('java');
     const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
+    const [isExpanded, setIsExpanded] = useState(false);
 
     useEffect(() => {
         const handleResize = () => setIsMobile(window.innerWidth < 768);
@@ -22,7 +23,7 @@ const Homepage = () => {
             if (heroElement) {
                 const rect = heroElement.getBoundingClientRect();
 
-                const threshold = isMobile ? -300 : -100;
+                const threshold = isMobile ? -400 : -100;
                 setIsHeroInFocus(rect.top >= threshold);
             }
         };
@@ -37,15 +38,20 @@ const Homepage = () => {
         setExpandedSection(prevState => prevState === sectionId ? null : sectionId);
     };
 
+    const toggleExpand = () => {
+        setIsExpanded(!isExpanded);
+      };
+
     const sections = [
         {
             id: 'java',
             name: 'Java',
-            description: "Java is my primary language and the one I have most experience with. I always thrive to produce secure and scaleable code to the best of my ability. Either if it's creating new API's or managing existing ones. I prosper especially in a challenge and often try to think outside the box to tackle any obstacle in my way. With a great attention to detail, maybe I am the one to solve your problems?"},
+            description: "Java is my primary language and the one I have most experience with. I always thrive to produce secure and scaleable code to the best of my ability. Either if it's creating new API's or managing existing ones. I prosper especially in a challenge and often try to think outside the box to tackle any obstacle in my way. With a great attention to detail, maybe I am the one to solve your problems?"
+        },
         {
             id: 'javascript',
-            name: 'JavaScript',
-            description: "I have a good knowledge of JavaScript and it's something I've worked quite a lot with and something I enjoy. Even here I always try to produce high-quality code that is secure and manageable but at the same time bring life to a webpage and give the user the best experience possible."
+            name: 'JS/TS',
+            description: "I have worked extensively with both Javascript and Typescript in several of the projects I have been a part of. It is something I feel comfortable with and would very much like to work with in future projects in one way or another."
         },
         {
             id: 'react',
@@ -77,17 +83,13 @@ const Homepage = () => {
             name: 'Docker',
             description: 'This is text about Docker. Docker is an open-source platform used for developing, shipping, and running applications inside containers. It allows developers to package applications and their dependencies into a standardized unit, ensuring consistency across environments.'
         },
-        {
-            id: 'typescript',
-            name: 'TypeScript',
-            description: 'This is text about TypeScript. TypeScript is a superset of JavaScript that adds static typing to the language. It helps catch errors early during development and provides better tooling for large-scale applications.'
-        },
+
     ];
 
 
     return (
         <>
-            <motion.div className="hero">
+            <motion.div className="hero-container">
                 <motion.div
                     className="hero_content"
                     initial={{ opacity: 0, scale: 0 }}
@@ -99,7 +101,7 @@ const Homepage = () => {
 
                 <motion.div
                     initial={{ opacity: 0, scale: 0 }}
-                    animate={{ opacity: isHeroInFocus ? 1 : 0.2 , scale: 1 }}
+                    animate={{ opacity: isHeroInFocus ? 1 : 0.2, scale: 1 }}
                     transition={{ duration: 1 }}
                     className="hero_intro">
                     <h2>
@@ -201,6 +203,22 @@ const Homepage = () => {
                         </motion.div>
                     ))}
                 </div>
+            </div>
+
+            <div className="jobs-container">
+                <motion.h1
+                    initial={{ opacity: 0, y: -20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.7 }}
+                    className="jobs-title">
+                    What I'm looking for
+                </motion.h1>
+
+                <motion.div className="jobs" onClick={toggleExpand}>
+                    <h2>BackEnd Developer</h2>
+                    <h2>FrontEnd Developer</h2>
+                    <h2>Fullstack Developer</h2>
+                </motion.div>
             </div>
 
         </>
