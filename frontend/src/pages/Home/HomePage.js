@@ -54,6 +54,11 @@ const Homepage = () => {
             description: "I have worked extensively with both Javascript and Typescript in several of the projects I have been a part of. It is something I feel comfortable with and would very much like to work with in future projects in one way or another."
         },
         {
+            id: 'git',
+            name: 'Git',
+            description: "I've worked with Git through the years I studied, did my internship and projects at home. It's something I enjoy and feel comfortable. Even if it's just normal version-management or code reviewing."
+        },
+        {
             id: 'react',
             name: 'React',
             description: "This portfolio is my second React project and I chose React to expand my knowledge as much as possible. I thoroughly enjoy it and I would very much like to work more with it on something bigger. I especially enjoy the component-based architecture to minimize repetitive code and also being easy to debug."
@@ -76,12 +81,23 @@ const Homepage = () => {
         {
             id: 'sql',
             name: 'SQL',
-            description: 'This is text about SQL. SQL (Structured Query Language) is a language used for managing and querying relational databases. It allows developers to create, update, and manipulate data stored in database tables.'
+            description: "SQL is the primary db langauge I have used db creation and manipulation. I've used it extensively throughout my studies and projects and is something I feel comfortable with."
         },
         {
             id: 'docker',
             name: 'Docker',
-            description: 'This is text about Docker. Docker is an open-source platform used for developing, shipping, and running applications inside containers. It allows developers to package applications and their dependencies into a standardized unit, ensuring consistency across environments.'
+            description: "I would say I have a good understanding of Docker. It is something I have come across all through my studies but also in my LIA and is something I like using."
+        },
+        {
+            id: 'scrum',
+            name: 'Scrum',
+            description: "As of work methodology, Scrum is the one for me. The daily standups and the sprints is something that makes me feel structured and prepared for every challenge. I'm also knowledgeable in kanban."
+        },
+        {
+            id: 'other',
+            name: 'More',
+            description: "More tech I worked with: Vue, Boostrap, mongoDB, Liquibase, DBeaver, Postman, activeMQ, Figma, Framer-motion, Ubuntu, Bash. I have also worked a lot with .XSD, .JSON and .XML."
+             
         },
 
     ];
@@ -89,6 +105,13 @@ const Homepage = () => {
 
     return (
         <>
+
+        <div id="dev_message">
+            <h2>DEV MESSAGE</h2>
+            <h3>Good to see you here! I'm currently developing, adding and changing new features all the time. 2024-11-28</h3>
+            <p>Currently working on: Light/Dark mode. "A fun fact about me". Fixing the .about page, scroll-snapping.</p>
+            <h3>Mikael Ros Tobiasson</h3>
+        </div>
             <motion.div className="hero-container">
                 <motion.div
                     className="hero_content"
@@ -114,7 +137,7 @@ const Homepage = () => {
                     </p>
 
                     <p>
-                        I studied Java Enterprise Utvecklare at YRGO for 2 years where I learned the fundamentals of Java. Also proficient in <RoughNotation type="highlight" color="#870da2" show={true} animationDelay={3000} animationDuration={1500}>database management
+                        I studied Java Enterprise Utvecklare at YRGO for 2 years and would now call me an expert in Java. I am also proficient in <RoughNotation type="highlight" color="#870da2" show={true} animationDelay={3000} animationDuration={1500}>SQL
                         </RoughNotation> and several front-end frameworks, I’m dedicated to <RoughNotation type="highlight" color="#870da2" show={true} animationDelay={4000} animationDuration={1500}> delivering secure </RoughNotation>, <RoughNotation type="highlight" color="#870da2" show={true} animationDelay={5000} animationDuration={1500}>maintainable code</RoughNotation> that drives seamless user experiences. Eager to solve technical challenges and contribute to impactful projects within a dynamic development team.
                     </p>
                     <h2>

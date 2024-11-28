@@ -27,6 +27,15 @@ body {
    z-index: -1;
 }
 
+#dev_message {
+   border-radius: 15px;
+   border-style: groove;
+   border-color: #9644bb;
+   width: fit-content;
+   padding: 10px;
+   margin-inline: auto;
+}
+
 .hero-container {
    position: relative;
    display: flex;
