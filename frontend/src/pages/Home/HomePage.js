@@ -40,7 +40,7 @@ const Homepage = () => {
 
     const toggleExpand = () => {
         setIsExpanded(!isExpanded);
-      };
+    };
 
     const sections = [
         {
@@ -97,7 +97,7 @@ const Homepage = () => {
             id: 'other',
             name: 'More',
             description: "More tech I worked with: Vue, Boostrap, mongoDB, Liquibase, DBeaver, Postman, activeMQ, Figma, Framer-motion, Ubuntu, Bash. I have also worked a lot with .XSD, .JSON and .XML."
-             
+
         },
 
     ];
@@ -105,145 +105,147 @@ const Homepage = () => {
 
     return (
         <>
-
-        <div id="dev_message">
-            <h2>DEV MESSAGE</h2>
-            <h3>Good to see you here! I'm currently developing, adding and changing new features all the time. 2024-11-28</h3>
-            <p>Currently working on: Light/Dark mode. "A fun fact about me". Fixing the .about page, scroll-snapping.</p>
-            <h3>Mikael Ros Tobiasson</h3>
-        </div>
-            <motion.div className="hero-container">
-                <motion.div
-                    className="hero_content"
-                    initial={{ opacity: 0, scale: 0 }}
-                    animate={{ opacity: isHeroInFocus ? 1 : 0.2, scale: 1 }}
-                    transition={{ duration: 1 }}
-                >
-                    <img src={portrait} alt="profile image" className="hero_image"></img>
-                </motion.div>
-
-                <motion.div
-                    initial={{ opacity: 0, scale: 0 }}
-                    animate={{ opacity: isHeroInFocus ? 1 : 0.2, scale: 1 }}
-                    transition={{ duration: 1 }}
-                    className="hero_intro">
-                    <h2>
-                        Hello! My name is Mikael Ros Tobiasson, a <RoughNotation type="highlight" color="#9644bb" show={true} animationDelay={1000} animationDuration={1500} strokeWidth={1}>developer</RoughNotation> from Gothenburg, Sweden
-                    </h2>
-
-                    <p>
-                        <RoughNotation type="highlight" color="#870da2" show={true} animationDelay={1500} animationDuration={1500}>
-                            Passionate</RoughNotation> and <RoughNotation type="highlight" color="#870da2" show={true} animationDelay={2000} animationDuration={1500}>detail-oriented</RoughNotation> backend Java developer looking for new opportunities
-                    </p>
-
-                    <p>
-                        I studied Java Enterprise Utvecklare at YRGO for 2 years and would now call me an expert in Java. I am also proficient in <RoughNotation type="highlight" color="#870da2" show={true} animationDelay={3000} animationDuration={1500}>SQL
-                        </RoughNotation> and several front-end frameworks, I’m dedicated to <RoughNotation type="highlight" color="#870da2" show={true} animationDelay={4000} animationDuration={1500}> delivering secure </RoughNotation>, <RoughNotation type="highlight" color="#870da2" show={true} animationDelay={5000} animationDuration={1500}>maintainable code</RoughNotation> that drives seamless user experiences. Eager to solve technical challenges and contribute to impactful projects within a dynamic development team.
-                    </p>
-                    <h2>
-                        I'm currently looking for a new role as a developer.  <RoughNotation type="circle" color="#dae31c" show={true} animationDelay={1000} animationDuration={1500}>Hire me?</RoughNotation>
-                    </h2>
-                    <button className="msgBtn"
-                        onClick={() => {
-                            window.location.href = "mailto:mikaeltobiasson@hotmail.com";
-                        }}> Send me a message
-                    </button>
-
-                    <button
-                        className="msgBtn"
-                        onClick={() => {
-                            const link = document.createElement("a");
-                            link.href = `${process.env.PUBLIC_URL}/CV_Mikael_Ros_Tobiasson.pdf`;
-                            link.download = "Mikael_Ros_Tobiasson_CV.pdf";
-                            document.body.appendChild(link);
-                            link.click();
-                            document.body.removeChild(link);
-                        }}
+            <div className="scroll-container">
+                <motion.div className="hero-container">
+                    <motion.div
+                        className="hero_content"
+                        initial={{ opacity: 0, scale: 0 }}
+                        animate={{ opacity: isHeroInFocus ? 1 : 0.2, scale: 1 }}
+                        transition={{ duration: 1 }}
                     >
-                        Download CV
-                    </button>
+                        <img src={portrait} alt="profile image" className="hero_image"></img>
+                    </motion.div>
 
-                    <button
-                        className="msgBtn"
-                        onClick={() => {
-                            const link = document.createElement("a");
-                            link.href = `${process.env.PUBLIC_URL}/Personligt Brev - Mikael Ros Tobiasson.pdf`;
-                            link.download = "Personligt Brev - Mikael Ros Tobiasson.pdf";
-                            document.body.appendChild(link);
-                            link.click();
-                            document.body.removeChild(link);
-                        }}
-                    >
-                        Download Personal Letter
-                    </button>
-                </motion.div>
-            </motion.div >
+                    <div id="dev_message">
+                        <h2>DEV MESSAGE</h2>
+                        <h3>Good to see you here! I'm currently developing, adding and changing new features all the time.</h3>
+                        <p>Currently working on: Light/Dark mode. "A fun fact about me" and fixing aboutMe page. 2024-12-02</p>
+                        <h3>Mikael Ros Tobiasson</h3>
+                    </div>
 
-            <div className="skills-container">
-                <motion.h1
-                    initial={{ opacity: 0, y: -20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.7 }}
-                    className="skills-title"
-                >
-                    My Skills
-                </motion.h1>
+                    <motion.div
+                        initial={{ opacity: 0, scale: 0 }}
+                        animate={{ opacity: isHeroInFocus ? 1 : 0.2, scale: 1 }}
+                        transition={{ duration: 1 }}
+                        className="hero_intro">
+                        <h2>
+                            Hello! My name is Mikael Ros Tobiasson, a <RoughNotation type="highlight" color="#9644bb" show={true} animationDelay={1000} animationDuration={1500} strokeWidth={1}>developer</RoughNotation> from Gothenburg, Sweden
+                        </h2>
 
-                <div className="skills">
-                    {sections.map(section => (
-                        <motion.div
-                            key={section.id}
-                            id={section.id}
-                            className="section"
+                        <p>
+                            <RoughNotation type="highlight" color="#870da2" show={true} animationDelay={1500} animationDuration={1500}>
+                                Passionate</RoughNotation> and <RoughNotation type="highlight" color="#870da2" show={true} animationDelay={2000} animationDuration={1500}>detail-oriented</RoughNotation> backend Java developer looking for new opportunities
+                        </p>
+
+                        <p>
+                            I studied Java Enterprise Utvecklare at YRGO for 2 years and would now call me an expert in Java. I am also proficient in <RoughNotation type="highlight" color="#870da2" show={true} animationDelay={3000} animationDuration={1500}>SQL
+                            </RoughNotation> and several front-end frameworks, I’m dedicated to <RoughNotation type="highlight" color="#870da2" show={true} animationDelay={4000} animationDuration={1500}> delivering secure </RoughNotation>, <RoughNotation type="highlight" color="#870da2" show={true} animationDelay={5000} animationDuration={1500}>maintainable code</RoughNotation> that drives seamless user experiences. Eager to solve technical challenges and contribute to impactful projects within a dynamic development team.
+                        </p>
+                        <h2>
+                            I'm currently looking for a new role as a developer.  <RoughNotation type="circle" color="#dae31c" show={true} animationDelay={1000} animationDuration={1500}>Hire me?</RoughNotation>
+                        </h2>
+                        <button className="msgBtn"
+                            onClick={() => {
+                                window.location.href = "mailto:mikaeltobiasson@hotmail.com";
+                            }}> Send me a message
+                        </button>
+
+                        <button
+                            className="msgBtn"
+                            onClick={() => {
+                                const link = document.createElement("a");
+                                link.href = `${process.env.PUBLIC_URL}/CV_Mikael_Ros_Tobiasson.pdf`;
+                                link.download = "Mikael_Ros_Tobiasson_CV.pdf";
+                                document.body.appendChild(link);
+                                link.click();
+                                document.body.removeChild(link);
+                            }}
                         >
-                            <motion.h2
-                                onClick={() => toggleSection(section.id)}
-                                initial={{ opacity: 0.5 }}
-                                animate={{ opacity: expandedSection === section.id ? 1 : 0.3 }}
-                                transition={{ duration: 0.7 }}
-                            >
-                                {section.name}
-                            </motion.h2>
+                            Download CV
+                        </button>
 
-                            <motion.p
+                        <button
+                            className="msgBtn"
+                            onClick={() => {
+                                const link = document.createElement("a");
+                                link.href = `${process.env.PUBLIC_URL}/Personligt Brev - Mikael Ros Tobiasson.pdf`;
+                                link.download = "Personligt Brev - Mikael Ros Tobiasson.pdf";
+                                document.body.appendChild(link);
+                                link.click();
+                                document.body.removeChild(link);
+                            }}
+                        >
+                            Download Personal Letter
+                        </button>
+                    </motion.div>
+                </motion.div >
+
+                <div className="skills-container">
+                    <motion.h1
+                        initial={{ opacity: 0, y: -20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.7 }}
+                        className="skills-title"
+                    >
+                        My Skills
+                    </motion.h1>
+
+                    <div className="skills">
+                        {sections.map(section => (
+                            <motion.div
                                 key={section.id}
-                                initial={{ opacity: 0, y: 20, scale: 0.5 }}
-                                animate={{
-                                    opacity: expandedSection === section.id ? 1 : 0,
-                                    y: expandedSection === section.id ? 0 : 20,
-                                    scale: expandedSection === section.id ? 1 : 1,
-                                }}
-                                exit={{ opacity: 0, y: 20, scale: 0.5 }}
-                                transition={{
-                                    opacity: { duration: 0.3 },
-                                    y: { duration: 0.6, ease: "easeInOut" },
-                                    scale: { duration: 0.3 }
-                                }}
-                                className="section-description"
+                                id={section.id}
+                                className="section"
                             >
-                                {section.description}
-                            </motion.p>
-                        </motion.div>
-                    ))}
+                                <motion.h2
+                                    onClick={() => toggleSection(section.id)}
+                                    initial={{ opacity: 0.5 }}
+                                    animate={{ opacity: expandedSection === section.id ? 1 : 0.3 }}
+                                    transition={{ duration: 0.7 }}
+                                >
+                                    {section.name}
+                                </motion.h2>
+
+                                <motion.p
+                                    key={section.id}
+                                    initial={{ opacity: 0, y: 20, scale: 0.5 }}
+                                    animate={{
+                                        opacity: expandedSection === section.id ? 1 : 0,
+                                        y: expandedSection === section.id ? 0 : 20,
+                                        scale: expandedSection === section.id ? 1 : 1,
+                                    }}
+                                    exit={{ opacity: 0, y: 20, scale: 0.5 }}
+                                    transition={{
+                                        opacity: { duration: 0.3 },
+                                        y: { duration: 0.6, ease: "easeInOut" },
+                                        scale: { duration: 0.3 }
+                                    }}
+                                    className="section-description"
+                                >
+                                    {section.description}
+                                </motion.p>
+                            </motion.div>
+                        ))}
+                    </div>
+                </div>
+
+                <div className="jobs-container">
+                    <motion.h1
+                        initial={{ opacity: 0, y: -20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.7 }}
+                        className="jobs-title">
+                        What I'm looking for
+                    </motion.h1>
+
+                    <motion.div className="jobs" onClick={toggleExpand}>
+                        <h2>BackEnd Developer</h2>
+                        <h2>FrontEnd Developer</h2>
+                        <h2>Fullstack Developer</h2>
+                        <h2></h2>
+                    </motion.div>
                 </div>
             </div>
-
-            <div className="jobs-container">
-                <motion.h1
-                    initial={{ opacity: 0, y: -20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.7 }}
-                    className="jobs-title">
-                    What I'm looking for
-                </motion.h1>
-
-                <motion.div className="jobs" onClick={toggleExpand}>
-                    <h2>BackEnd Developer</h2>
-                    <h2>FrontEnd Developer</h2>
-                    <h2>Fullstack Developer</h2>
-                </motion.div>
-            </div>
-
         </>
     );
 }

@@ -20,6 +20,7 @@
 body {
    color: #e8e8e8;
    font-family: var(--primary-font);
+   overflow: hidden;
 }
 
 #particles {
@@ -33,8 +34,24 @@ body {
    border-color: #9644bb;
    width: fit-content;
    padding: 10px;
-   margin-inline: auto;
+   position: absolute;
+   top: 0;
 }
+
+.scroll-container {
+   scroll-snap-type: y mandatory; /* Vertical scroll-snapping */
+   overflow-y: scroll; /* Enable vertical scrolling */
+   height: 100vh; /* Full viewport height */
+ }
+ 
+ .hero-container, .skills-container, .jobs-container {
+   scroll-snap-align: start; /* Snap sections to the top */
+   height: 100vh; /* Full viewport height for snapping */
+   display: flex;
+   justify-content: center;
+   align-items: center;
+ }
+ 
 
 .hero-container {
    position: relative;
@@ -118,6 +135,8 @@ body {
    flex-direction: column;
    align-items: center;
    margin-top: 20vh;
+   z-index: 2;
+   position: relative;
 }
 
 .skills-title {
@@ -166,7 +185,7 @@ body {
 
 .jobs {
    display: flex;
-   flex-direction: row;
+   gap: 30px;
 }
 
 .jobs h2 {
