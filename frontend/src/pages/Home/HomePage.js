@@ -116,12 +116,12 @@ const Homepage = () => {
                         <img src={portrait} alt="profile image" className="hero_image"></img>
                     </motion.div>
 
-                    <div id="dev_message">
+                    {/* <div id="dev_message">
                         <h2>DEV MESSAGE</h2>
                         <h3>Good to see you here! I'm currently developing, adding and changing new features all the time.</h3>
                         <p>Currently working on: Light/Dark mode. "A fun fact about me" and fixing aboutMe page. 2024-12-02</p>
                         <h3>Mikael Ros Tobiasson</h3>
-                    </div>
+                    </div> */}
 
                     <motion.div
                         initial={{ opacity: 0, scale: 0 }}
@@ -132,17 +132,18 @@ const Homepage = () => {
                             Hello! My name is Mikael Ros Tobiasson, a <RoughNotation type="highlight" color="#9644bb" show={true} animationDelay={1000} animationDuration={1500} strokeWidth={1}>developer</RoughNotation> from Gothenburg, Sweden
                         </h2>
 
-                        <p>
+                        {/* <p>
                             <RoughNotation type="highlight" color="#870da2" show={true} animationDelay={1500} animationDuration={1500}>
-                                Passionate</RoughNotation> and <RoughNotation type="highlight" color="#870da2" show={true} animationDelay={2000} animationDuration={1500}>detail-oriented</RoughNotation> backend Java developer looking for new opportunities
-                        </p>
+                                Passionate</RoughNotation> and <RoughNotation type="highlight" color="#870da2" show={true} animationDelay={2000} animationDuration={1500}>detail-oriented</RoughNotation> software developer looking for new opportunities
+                        </p> */}
 
                         <p>
-                            I studied Java Enterprise Utvecklare at YRGO for 2 years and would now call me an expert in Java. I am also proficient in <RoughNotation type="highlight" color="#870da2" show={true} animationDelay={3000} animationDuration={1500}>SQL
-                            </RoughNotation> and several front-end frameworks, I’m dedicated to <RoughNotation type="highlight" color="#870da2" show={true} animationDelay={4000} animationDuration={1500}> delivering secure </RoughNotation>, <RoughNotation type="highlight" color="#870da2" show={true} animationDelay={5000} animationDuration={1500}>maintainable code</RoughNotation> that drives seamless user experiences. Eager to solve technical challenges and contribute to impactful projects within a dynamic development team.
+                            I'm a junior software developer looking for new opportunities. I'm also proficient in <RoughNotation type="highlight" color="#870da2" show={true} animationDelay={3000} animationDuration={1500}> SQL
+                            </RoughNotation> and several front-end frameworks, I’m dedicated to <RoughNotation type="highlight" color="#870da2" show={true} animationDelay={4000} animationDuration={1500}> 
+                            delivering secure </RoughNotation>, <RoughNotation type="highlight" color="#870da2" show={true} animationDelay={5000} animationDuration={1500}>maintainable code</RoughNotation> that drives seamless user experiences. Eager to solve technical challenges and contribute to impactful projects within a dynamic development team.
                         </p>
                         <h2>
-                            I'm currently looking for a new role as a developer.  <RoughNotation type="circle" color="#dae31c" show={true} animationDelay={1000} animationDuration={1500}>Hire me?</RoughNotation>
+                            I'm currently looking for a new role as a    developer.  <RoughNotation type="circle" color="#dae31c" show={true} animationDelay={1000} animationDuration={1500}>Hire me?</RoughNotation>
                         </h2>
                         <button className="msgBtn"
                             onClick={() => {
@@ -239,10 +240,9 @@ const Homepage = () => {
                     </motion.h1>
 
                     <motion.div className="jobs" onClick={toggleExpand}>
-                        <h2>BackEnd Developer</h2>
-                        <h2>FrontEnd Developer</h2>
                         <h2>Fullstack Developer</h2>
-                        <h2></h2>
+                        <h2>Software Developer</h2>
+                        <h2>BackEnd/FrontEnd -Developer</h2>
                     </motion.div>
                 </div>
             </div>

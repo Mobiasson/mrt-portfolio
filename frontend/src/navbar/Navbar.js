@@ -31,14 +31,14 @@ const Navbar = () => {
                     </NavLink>
                 </motion.li>
 
-                <motion.li
+                {/* <motion.li
                     whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.9 }}
                 >
                     <NavLink to="/about-me" activeClassName="active">
                         .aboutMe()
                     </NavLink>
-                </motion.li>
+                </motion.li> */}
 
                 <motion.li
                     whileHover={{ scale: 1.1 }}
