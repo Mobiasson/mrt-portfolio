@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/mrt-portfolio/static/css/main.d1ca034d.css",
-    "main.js": "/mrt-portfolio/static/js/main.e5e27dfd.js",
+    "main.js": "/mrt-portfolio/static/js/main.1d3e67b5.js",
     "static/media/Roboto-Bold.ttf": "/mrt-portfolio/static/media/Roboto-Bold.63311334b795ce3b76e2.ttf",
     "static/media/Roboto-Italic.ttf": "/mrt-portfolio/static/media/Roboto-Italic.fed51269e045a3e4b6d2.ttf",
     "static/media/mrt.jpg": "/mrt-portfolio/static/media/mrt.051243703c4cb0928edd.jpg",
@@ -9,10 +9,10 @@
     "static/media/linkedin-logo.svg": "/mrt-portfolio/static/media/linkedin-logo.27a3f479ca1bbb0ceef19e395081fb94.svg",
     "index.html": "/mrt-portfolio/index.html",
     "main.d1ca034d.css.map": "/mrt-portfolio/static/css/main.d1ca034d.css.map",
-    "main.e5e27dfd.js.map": "/mrt-portfolio/static/js/main.e5e27dfd.js.map"
+    "main.1d3e67b5.js.map": "/mrt-portfolio/static/js/main.1d3e67b5.js.map"
   },
   "entrypoints": [
     "static/css/main.d1ca034d.css",
-    "static/js/main.e5e27dfd.js"
+    "static/js/main.1d3e67b5.js"
   ]
 }
