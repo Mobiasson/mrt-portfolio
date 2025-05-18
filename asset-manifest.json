@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/mrt-portfolio/static/css/main.e84b4a76.css",
+    "main.css": "/mrt-portfolio/static/css/main.5b45e96a.css",
     "main.js": "/mrt-portfolio/static/js/main.75e44f8b.js",
     "static/media/Roboto-Bold.ttf": "/mrt-portfolio/static/media/Roboto-Bold.63311334b795ce3b76e2.ttf",
     "static/media/Roboto-Italic.ttf": "/mrt-portfolio/static/media/Roboto-Italic.fed51269e045a3e4b6d2.ttf",
@@ -8,11 +8,11 @@
     "static/media/github-logo.svg": "/mrt-portfolio/static/media/github-logo.197212f02efa31cf1fd6ce8f39191593.svg",
     "static/media/linkedin-logo.svg": "/mrt-portfolio/static/media/linkedin-logo.27a3f479ca1bbb0ceef19e395081fb94.svg",
     "index.html": "/mrt-portfolio/index.html",
-    "main.e84b4a76.css.map": "/mrt-portfolio/static/css/main.e84b4a76.css.map",
+    "main.5b45e96a.css.map": "/mrt-portfolio/static/css/main.5b45e96a.css.map",
     "main.75e44f8b.js.map": "/mrt-portfolio/static/js/main.75e44f8b.js.map"
   },
   "entrypoints": [
-    "static/css/main.e84b4a76.css",
+    "static/css/main.5b45e96a.css",
     "static/js/main.75e44f8b.js"
   ]
 }
