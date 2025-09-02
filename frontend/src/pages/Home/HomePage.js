@@ -80,7 +80,7 @@ const Homepage = () => {
                     </h2>
 
                     <p>
-                        I'm a junior software developer looking for new opportunities. I'm also proficient in <RoughNotation type="highlight" color="#870da2" show={true} animationDelay={3000} animationDuration={1500}> SQL
+                        I'm a fullstack-developer looking for new opportunities. I'm proficient in <RoughNotation type="highlight" color="#870da2" show={true} animationDelay={3000}animationDuration={1500}> SQL, HTML, CSS and many more
                         </RoughNotation> and several front-end frameworks, I’m dedicated to <RoughNotation type="highlight" color="#870da2" show={true} animationDelay={4000} animationDuration={1500}>
                             delivering secure </RoughNotation>, <RoughNotation type="highlight" color="#870da2" show={true} animationDelay={5000} animationDuration={1500}>maintainable code</RoughNotation> that drives seamless user experiences. Eager to solve technical challenges and contribute to impactful projects within a dynamic development team.
                     </p>
@@ -110,6 +110,7 @@ const Homepage = () => {
                             <button className="msgBtn">Download Personal Letter</button>
                         </a>
                     </div>
+                    
 
 
 
