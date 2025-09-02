@@ -29,7 +29,6 @@ body {
   position: sticky;
   top: -3px;
   padding: 1rem;
-  box-shadow: 0 0.125rem 0.25rem 0 rgb(0 0 0 / 11%);
 }
 
 .navbar-logo a {
@@ -37,6 +36,11 @@ body {
   text-decoration: none;
   font-size: 1.5rem;
   font-family: var(--primary-font);
+}
+
+.funFact-container {
+  border-radius: 5px;
+  color: aqua;
 }
 
 .navbar-links {

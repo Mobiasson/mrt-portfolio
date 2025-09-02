@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { NavLink } from 'react-router-dom';
 import { ReactComponent as LinkedinLogo } from '../assets/images/linkedin-logo.svg';
 import { ReactComponent as GithubLogo } from '../assets/images/github-logo.svg';
@@ -8,6 +8,17 @@ import './Navbar.css';
 
 const Navbar = () => {
 
+    const [factIndex, setFactIndex] = useState(0);
+
+    const facts = [
+        "I am a certified florist",
+        "I've played badminton for over 20 years"
+    ];
+
+    const changeFact = () => {
+        setFactIndex(prev => (prev + 1) % facts.length);
+    };
+
     return (
         <motion.nav
             className="navbar"
@@ -15,6 +26,13 @@ const Navbar = () => {
             animate={{ y: 0 }}
             transition={{ type: 'spring', stiffness: 120 }}
         >
+            {/* <motion.div className="funFact-container">
+                <button className="msgBtn" onClick={changeFact}>
+                    CHANGE FACT
+                </button>
+                <h2>Fun Fact about me</h2>
+                <p>{facts[factIndex]}</p>
+            </motion.div> */}
             <motion.div
                 whileHover={{ scale: 1.2 }}
                 whileTap={{ scale: 0.9 }} className="navbar-logo">
