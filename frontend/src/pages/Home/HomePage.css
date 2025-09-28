@@ -12,13 +12,13 @@
 @font-face {
   font-family: 'Roboto-Italic';
   src: url("../../assets/fonts/roboto/Roboto-Italic.ttf") format('truetype');
-  font-weight: italic;
-  font-style: normal;
+  font-weight: normal;
+  font-style: italic;
 }
 
 :root {
   --primary-font: 'Roboto', sans-serif;
-  --secondary-font: 'Roboto-Italic';
+  --secondary-font: 'Roboto-Italic', sans-serif;
 }
 
 body {
@@ -33,9 +33,8 @@ body {
 }
 
 #dev_message {
+  border: 1px groove #9644bb;
   border-radius: 15px;
-  border-style: groove;
-  border-color: #9644bb;
   width: fit-content;
   padding: 10px;
   position: absolute;
@@ -48,20 +47,18 @@ body {
   height: 100vh;
 }
 
-.hero-container, .skills-container, .jobs-container {
+.hero-container,
+.skills-container,
+.jobs-container {
   scroll-snap-align: start;
-  height: auto;
   display: flex;
   justify-content: center;
   align-items: center;
+  height: auto;
 }
 
 .hero-container {
-  position: relative;
-  display: flex;
-  margin-inline: 20vh;
-  margin-top: 10vh;
-  scroll-snap-type: y mandatory;
+  margin: 10vh 20vh;
 }
 
 .hero_intro {
@@ -74,19 +71,19 @@ body {
 }
 
 .hero_intro h3 {
-  opacity: 70%;
-  color: rgb(154, 154, 154);
-}
-
-.hero_content h2 span:first-child {
-  display: block;
+  opacity: 0.7;
+  color: #9a9a9a;
 }
 
 .hero_content h2 {
   font-family: var(--primary-font);
   font-weight: bold;
-  width: 100%;
   font-size: 34px;
+  width: 100%;
+}
+
+.hero_content h2 span:first-child {
+  display: block;
 }
 
 .hero_image {
@@ -95,37 +92,31 @@ body {
   border-radius: 10px;
 }
 
-.hero_intro .msgBtn {
+.msgBtn {
   font-family: var(--primary-font);
   padding: 6px 20px;
   font-size: 15px;
-  font-weight: 0;
   border-radius: 6px;
-  transition: background-color 0.5s;
-}
-
-.msgBtn {
   margin-right: 20px;
+  transition: all 0.5s;
 }
 
 .msgBtn:hover {
   background-color: #0e1212;
-  border-color: #d8d8d8;
-  border-width: 0.5px;
+  border: 0.5px solid #d8d8d8;
   color: #e8e8e8;
-  border-radius: 6px;
   cursor: pointer;
 }
 
 .button-link {
   font: bold 11px Arial;
   text-decoration: none;
-  background-color: #EEEEEE;
-  color: #333333;
+  background-color: #eee;
+  color: #333;
   padding: 2px 6px;
-  border: 1px solid #CCCCCC;
-  border-right-color: #333333;
-  border-bottom-color: #333333;
+  border: 1px solid #ccc;
+  border-right-color: #333;
+  border-bottom-color: #333;
 }
 
 .assignments {
@@ -139,37 +130,34 @@ body {
   max-height: 20vh;
   list-style: none;
   padding: 0;
-  margin: 10px 0 0 0;
+  margin: 10px 0 0;
   gap: 10px;
 }
 
 .assignments li {
   padding: 8px 12px;
   background-color: #f0f0f0;
-  color: #333333;
+  color: #333;
   border-radius: 5px;
   font-size: 16px;
 }
 
 .skills-container {
-  display: flex;
   flex-direction: column;
   align-items: center;
   margin-top: 20vh;
-  z-index: 2;
   position: relative;
+  z-index: 2;
 }
 
 .skills-title {
   font-size: 4vh;
   text-align: center;
-  margin-bottom: 0;
-  margin-top: 23vh;
+  margin: 23vh 0 0;
 }
 
 .skills {
-  scroll-snap-type: y mandatory;
-  background-color: rgb(37, 38, 38);
+  background-color: #252626;
   display: flex;
   font-size: 17px;
   margin: 20px 10% 20%;
@@ -177,24 +165,23 @@ body {
 }
 
 .skills h2 {
-  padding-inline: 20px;
+  padding: 0 20px;
   cursor: pointer;
   width: fit-content;
 }
 
 .skills p {
-  background-color: #333333;
+  background-color: #333;
   padding: 10px;
   width: 50%;
   position: absolute;
   left: 25%;
-  transition: transform 0.6s ease-in-out;
   border-radius: 15px;
+  transition: transform 0.6s ease-in-out;
 }
 
 .jobs-container {
   margin: 20vh 0 30vh;
-  display: flex;
   flex-direction: column;
 }
 
@@ -210,16 +197,51 @@ body {
 
 .jobs h2 {
   font-family: var(--secondary-font);
-  background-color: #333333;
-  margin-inline: auto;
-  border-style: groove;
+  background-color: #333;
+  margin: 0 auto;
+  border: 1px groove;
   border-radius: 15px;
   padding: 7vh;
 }
 
-/* Responsive Breakpoints */
+.terminal-container {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
 
-/* Extra small screens (phones, up to 640px) */
+.terminal {
+  background: #1a1a1a;
+  color: #00ff00;
+  font-family: 'Courier New', monospace;
+  width: 600px;
+  border-radius: 5px;
+  padding: 10px;
+  margin-top: 20px;
+}
+
+.terminal-header {
+  background: #333;
+  padding: 5px;
+  color: #fff;
+  text-align: center;
+}
+
+.terminal-body {
+  padding: 10px;
+  min-height: 100px;
+}
+
+.terminal-body a {
+  color: #00ff00;
+  text-decoration: underline;
+}
+
+.terminal-body a:hover {
+  color: #87ceeb;
+}
+
+/* Responsive Breakpoints */
 @media (max-width: 640px) {
   .scroll-container {
     scroll-snap-type: none;
@@ -256,20 +278,17 @@ body {
     margin: 0 auto;
   }
 
-  .hero_intro .msgBtn {
+  .msgBtn {
     font-size: clamp(12px, 4vw, 13px);
     padding: 8px 12px;
+    margin: 2vh 0;
+    height: 7vh;
   }
 
   .button-container {
     flex-direction: column;
     margin: 4vh 0;
     gap: 15px;
-  }
-
-  .msgBtn {
-    margin: 2vh 0;
-    height: 7vh;
   }
 
   .skills-container {
@@ -311,7 +330,6 @@ body {
   }
 }
 
-/* Medium screens (tablets, 641px to 1024px) */
 @media (min-width: 641px) and (max-width: 1024px) {
   .hero-container {
     margin: 8vh 5vw;
@@ -338,21 +356,13 @@ body {
     width: 70%;
   }
 
-  .skills-title {
-    font-size: clamp(22px, 4vw, 24px);
-  }
-
+  .skills-title,
   .jobs-title {
     font-size: clamp(22px, 4vw, 24px);
   }
 }
 
-/* Large screens (desktops, 1025px and up) */
 @media (min-width: 1025px) {
-  .hero-container {
-    margin: 10vh 15vw;
-  }
-
   .hero_image {
     width: clamp(320px, 25vw, 340px);
   }
