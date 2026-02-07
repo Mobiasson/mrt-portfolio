@@ -47,14 +47,12 @@ body {
   height: 100vh;
 }
 
-.hero-container,
-.skills-container,
-.jobs-container {
+.hero-container {
   scroll-snap-align: start;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: auto;
+  min-height: 100vh;
 }
 
 .hero-container {
@@ -97,7 +95,6 @@ body {
   padding: 6px 20px;
   font-size: 15px;
   border-radius: 6px;
-  margin-right: 20px;
   transition: all 0.5s;
 }
 
@@ -106,6 +103,13 @@ body {
   border: 0.5px solid #d8d8d8;
   color: #e8e8e8;
   cursor: pointer;
+}
+
+.button-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 2rem;
 }
 
 .button-link {
@@ -142,67 +146,7 @@ body {
   font-size: 16px;
 }
 
-.skills-container {
-  flex-direction: column;
-  align-items: center;
-  margin-top: 20vh;
-  position: relative;
-  z-index: 2;
-}
-
-.skills-title {
-  font-size: 4vh;
-  text-align: center;
-  margin: 23vh 0 0;
-}
-
-.skills {
-  background-color: #252626;
-  display: flex;
-  font-size: 17px;
-  margin: 20px 10% 20%;
-  border-radius: 20px;
-}
-
-.skills h2 {
-  padding: 0 20px;
-  cursor: pointer;
-  width: fit-content;
-}
-
-.skills p {
-  background-color: #333;
-  padding: 10px;
-  width: 50%;
-  position: absolute;
-  left: 25%;
-  border-radius: 15px;
-  transition: transform 0.6s ease-in-out;
-}
-
-.jobs-container {
-  margin: 20vh 0 30vh;
-  flex-direction: column;
-}
-
-.jobs-title {
-  font-size: 4vh;
-  text-align: center;
-}
-
-.jobs {
-  display: flex;
-  gap: 30px;
-}
-
-.jobs h2 {
-  font-family: var(--secondary-font);
-  background-color: #333;
-  margin: 0 auto;
-  border: 1px groove;
-  border-radius: 15px;
-  padding: 7vh;
-}
+/* Legacy skills-container styles removed - using .skills-container-new in SkillsSection.css */
 
 .terminal-container {
   display: flex;
@@ -243,14 +187,7 @@ body {
 
 /* Responsive Breakpoints */
 @media (max-width: 640px) {
-  .scroll-container {
-    scroll-snap-type: none;
-    overflow-y: auto;
-  }
-
-  .hero-container,
-  .skills-container,
-  .jobs-container {
+  .hero-container {
     margin: 5vh 3vw;
     flex-direction: column;
   }
@@ -279,54 +216,16 @@ body {
   }
 
   .msgBtn {
-    font-size: clamp(12px, 4vw, 13px);
-    padding: 8px 12px;
-    margin: 2vh 0;
-    height: 7vh;
+    font-size: clamp(12px, 3.5vw, 14px);
+    padding: 10px 16px;
+    width: 100%;
   }
 
   .button-container {
     flex-direction: column;
-    margin: 4vh 0;
-    gap: 15px;
-  }
-
-  .skills-container {
-    margin-top: 5vh;
-  }
-
-  .skills {
-    flex-wrap: wrap;
-    margin: 0 5% 15%;
-    font-size: clamp(14px, 4vw, 15px);
-  }
-
-  .skills-title {
-    margin-top: 0;
-    font-size: clamp(20px, 5vw, 22px);
-  }
-
-  .skills p {
-    font-size: clamp(12px, 4vw, 13px);
-    left: 0;
+    margin-top: 2vh;
+    gap: 10px;
     width: 100%;
-    top: 25vh;
-  }
-
-  .jobs {
-    flex-direction: column;
-    align-items: center;
-    gap: 15px;
-  }
-
-  .jobs h2 {
-    font-size: clamp(14px, 4vw, 15px);
-    padding: 4vh;
-    text-align: center;
-  }
-
-  .jobs-title {
-    font-size: clamp(20px, 5vw, 22px);
   }
 }
 
@@ -349,16 +248,6 @@ body {
 
   .hero_intro h3 {
     font-size: clamp(15px, 3vw, 16px);
-  }
-
-  .skills p {
-    left: 15%;
-    width: 70%;
-  }
-
-  .skills-title,
-  .jobs-title {
-    font-size: clamp(22px, 4vw, 24px);
   }
 }
 
