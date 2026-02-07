@@ -10,6 +10,12 @@ const skillsData = [
     description: "Java is my primary language and I would call myself somewhat of a java expert. I always strive to produce secure and scaleable code, and try to keep myself as updated as possible on what's new. Either if you're looking for someone to create smart solutions or create API's, I'm your man!" 
   },
   { 
+    id: "csharp", 
+    name: "C#", 
+    level: "Expert",
+    description: "C# is my second primary language and I have a very good knowledge of it. I have used C# in several projects and I really enjoy working with it. I have a good understanding of the .NET ecosystem and I'm always eager to learn more about it." 
+  },
+  { 
     id: "javascript", 
     name: "JS/TS", 
     level: "Advanced",
