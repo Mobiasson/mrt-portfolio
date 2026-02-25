@@ -35,6 +35,14 @@ const projects = [
     githubUrl: "https://github.com/Mobiasson/JobSter",
     liveUrl: null,
   },
+   {
+    id: 5,
+    title: "Blackjack",
+    description: "A simple Blackjack game built with HTML, CSS and Javascript. The game allows the player to play against the dealer, with options to hit and stand. It features a basic user interface and implements standard Blackjack rules.",
+    technologies: ["HTML", "CSS", "Javascript"],
+    githubUrl: "https://github.com/Mobiasson/Blackjack",
+    liveUrl: null,
+  },
 ];
 
 const FeaturedProjects = () => {

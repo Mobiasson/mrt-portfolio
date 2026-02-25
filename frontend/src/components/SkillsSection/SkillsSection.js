@@ -77,8 +77,28 @@ const skillsData = [
   },
 ];
 
+const educationData = [
+  {
+    id: "edu1",
+    degree: "Yrkeshögskola",
+    field: ".NET(C#)",
+    institution: "IT-Högskolan",
+    period: "2025-2027",
+    description: "Two-year vocational education focused on .NET development with C#. The program emphasizes practical skills in building web applications, APIs, and working with databases. Fullstack development is a core component, with training in both frontend and backend technologies, preparing me for real-world software engineering roles.",
+  },
+  {
+    id: "edu2",
+    degree: "Yrkeshögskola",
+    field: "Java Enterprise Utvecklare",
+    institution: "YRGO",
+    period: "2022-2024",
+    description: "Two-year vocational education focused on Java Enterprise development. The program covers a wide range of topics including Java programming, web development, databases, and software architecture. It emphasizes practical skills and real-world projects. I did 6 motnhs of internship at Västra Götalandsregionen as a Fullstack-developer at the Integrations department.",
+  },
+];
+
 const SkillsSection = () => {
   const [activeSkill, setActiveSkill] = useState("java");
+  const [activeEdu, setActiveEdu] = useState(null);
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -193,6 +213,59 @@ const SkillsSection = () => {
           </AnimatePresence>
         </div>
       </div>
+
+        <motion.div
+          className="education-section"
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-50px" }}
+          transition={{ duration: 0.7, delay: 0.2 }}
+        >
+          <h2 className="education-title">Academic Roadmap</h2>
+          <div className="education-timeline">
+            {educationData.map((edu, index) => (
+              <motion.div
+                key={edu.id}
+                className={`edu-entry ${activeEdu === edu.id ? "edu-active" : ""}`}
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: index * 0.15 }}
+                onClick={() => setActiveEdu(activeEdu === edu.id ? null : edu.id)}
+              >
+                <div className="edu-node">
+                  <div className="edu-dot" />
+                  {index < educationData.length - 1 && <div className="edu-line" />}
+                </div>
+                <div className="edu-body">
+                  <div className="edu-header">
+                    <div className="edu-meta">
+                      <span className="edu-period">{edu.period}</span>
+                      <span className="edu-institution">{edu.institution}</span>
+                    </div>
+                    <div className="edu-title-row">
+                      <h3 className="edu-degree">{edu.degree}</h3>
+                      <span className="edu-field">{edu.field}</span>
+                    </div>
+                  </div>
+                  <AnimatePresence>
+                    {activeEdu === edu.id && (
+                      <motion.p
+                        className="edu-description"
+                        initial={{ opacity: 0, height: 0, marginTop: 0 }}
+                        animate={{ opacity: 1, height: "auto", marginTop: "0.75rem" }}
+                        exit={{ opacity: 0, height: 0, marginTop: 0 }}
+                        transition={{ duration: 0.3, ease: "easeInOut" }}
+                      >
+                        {edu.description}
+                      </motion.p>
+                    )}
+                  </AnimatePresence>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </motion.div>
     </div>
   );
 };
