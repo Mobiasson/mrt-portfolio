@@ -31,7 +31,7 @@ const projects = [
     id: 4,
     title: "JobSter",
     description: "JobSter is an easier way to save job applications. You login with your account and password and it will save your applications. Change status from pending, accepted or rejected. You can also save notes on the application and see all your applications in a nice overview.",
-    technologies: ["React", "Java", "Spring Boot", "MongoDB"],
+    technologies: ["React", "Java", "MongoDB"],
     githubUrl: "https://github.com/Mobiasson/JobSter",
     liveUrl: null,
   },
