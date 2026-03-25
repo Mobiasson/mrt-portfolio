@@ -3,8 +3,16 @@ import { motion } from "framer-motion";
 import "./FeaturedProjects.css";
 
 const projects = [
-  {
+    {
     id: 1,
+    title: "Blackjack",
+    description: "First assignemnt we were tasked with in WebDevelopment. Create a simple but functional BlackJack game with only HTML, CSS and JavaScript.",
+    technologies: ["HTML, CSS and JavaScript"],
+    githubUrl: "https://github.com/Mobiasson/Blackjack",
+    liveUrl: null,
+  },
+  {
+    id: 2,
     title: "DungeonCrawler",
     description: "DungeonCrawler game for an assignment in school. The game is a 2D top-down dungeon crawler where the player must navigate through procedurally generated levels and defeat enemies.",
     technologies: ["C#"],
@@ -12,15 +20,15 @@ const projects = [
     liveUrl: null,
   },
   {
-    id: 2,
+    id: 3,
     title: "Quizzly",
     description: "This is a Quiz application built in WPF with MVVM architecture. It features a user-friendly interface where users can take quizzes on various topics, track their scores, and view their progress over time.",
-    technologies: ["C#", "WPF", "MVVM"],
+    technologies: ["C#", "WPF", "MVVM", "MongoDb"],
     githubUrl: "https://github.com/Mobiasson/Labb3_Quizzly",
     liveUrl: null,
   },
   {
-    id: 3,
+    id: 4,
     title: "Insulter",
     description: "WPF application that generates random insults. You can generate in different languages. You can perform CRUD operations on the insults and save them to a database.",
     technologies: ["C#", "WPF", "MongoDB"],
@@ -28,19 +36,11 @@ const projects = [
     liveUrl: null,
   },
    {
-    id: 4,
+    id: 5,
     title: "JobSter",
     description: "JobSter is an easier way to save job applications. You login with your account and password and it will save your applications. Change status from pending, accepted or rejected. You can also save notes on the application and see all your applications in a nice overview.",
     technologies: ["React", "Java", "MongoDB"],
     githubUrl: "https://github.com/Mobiasson/JobSter",
-    liveUrl: null,
-  },
-   {
-    id: 5,
-    title: "Blackjack",
-    description: "A simple Blackjack game built with HTML, CSS and Javascript. The game allows the player to play against the dealer, with options to hit and stand. It features a basic user interface and implements standard Blackjack rules.",
-    technologies: ["HTML", "CSS", "Javascript"],
-    githubUrl: "https://github.com/Mobiasson/Blackjack",
     liveUrl: null,
   },
 ];
