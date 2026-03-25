@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/mrt-portfolio/static/css/main.8ae4e435.css",
-    "main.js": "/mrt-portfolio/static/js/main.ff145ced.js",
+    "main.css": "/mrt-portfolio/static/css/main.ffae9401.css",
+    "main.js": "/mrt-portfolio/static/js/main.de1692a1.js",
     "static/media/Roboto-Bold.ttf": "/mrt-portfolio/static/media/Roboto-Bold.63311334b795ce3b76e2.ttf",
     "static/media/Roboto-Italic.ttf": "/mrt-portfolio/static/media/Roboto-Italic.fed51269e045a3e4b6d2.ttf",
     "static/media/mrt.jpg": "/mrt-portfolio/static/media/mrt.051243703c4cb0928edd.jpg",
     "static/media/github-logo.svg": "/mrt-portfolio/static/media/github-logo.197212f02efa31cf1fd6ce8f39191593.svg",
     "static/media/linkedin-logo.svg": "/mrt-portfolio/static/media/linkedin-logo.27a3f479ca1bbb0ceef19e395081fb94.svg",
     "index.html": "/mrt-portfolio/index.html",
-    "main.8ae4e435.css.map": "/mrt-portfolio/static/css/main.8ae4e435.css.map",
-    "main.ff145ced.js.map": "/mrt-portfolio/static/js/main.ff145ced.js.map"
+    "main.ffae9401.css.map": "/mrt-portfolio/static/css/main.ffae9401.css.map",
+    "main.de1692a1.js.map": "/mrt-portfolio/static/js/main.de1692a1.js.map"
   },
   "entrypoints": [
-    "static/css/main.8ae4e435.css",
-    "static/js/main.ff145ced.js"
+    "static/css/main.ffae9401.css",
+    "static/js/main.de1692a1.js"
   ]
 }
